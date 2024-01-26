@@ -1,0 +1,8 @@
+#!/bin/sh
+
+main() {
+  docker build -t ubuntu-ssh .
+  docker run -d -p 2222:22 --name ubuntu-ssh ubuntu-ssh
+}
+
+main
